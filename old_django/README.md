@@ -1,4 +1,3 @@
-
 # InterConnectX: Empowering Interoperability between Systems
 
 A backend middleware application to power bi-directional integration between two separate systems supporting REST and SOAP  communication with compatibility between them. 
