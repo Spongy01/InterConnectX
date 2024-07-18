@@ -4,6 +4,16 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 class requestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
+            path = self.path
+            message = "Hello, world!"
+
+            if path == '/rs':
+                # rest to soap handler here
+                message = "converting rest to soap"
+            elif path == '/sr':
+                # soap to rest handler here
+                message = "converting soap to rest"
+
             # Response status code
             self.send_response(200)
 
@@ -12,7 +22,7 @@ class requestHandler(BaseHTTPRequestHandler):
             self.end_headers()
 
             # HTML content to send
-            message = "Hello, world!"
+            
             
             # Write content as utf-8 data
             self.wfile.write(bytes(message, "utf8"))
